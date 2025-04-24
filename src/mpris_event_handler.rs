@@ -849,7 +849,7 @@ impl MprisEventHandler {
             metadata: HashMap::new(),
         };
 
-        let connection = connection::Builder::session()?
+        let connection = connection::Builder::system()?
             // FIXME: retry with "org.mpris.MediaPlayer2.librespot.instance<pid>"
             // on error
             .name("org.mpris.MediaPlayer2.librespot")?
